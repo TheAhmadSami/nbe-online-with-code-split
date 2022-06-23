@@ -7,6 +7,7 @@ export default styles = StyleSheet.create({
 
   accounts: {
     padding: 10,
+    height: '100%',
   },
 
   title: {
@@ -39,10 +40,13 @@ export default styles = StyleSheet.create({
     marginBottom: 5,
   },
 
+
+
   name: {
     color: '#222222',
     textAlign: 'center',
     fontWeight: '500',
   },
-  
+
+
 });

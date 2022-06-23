@@ -5,9 +5,9 @@ import {
 
 export default styles = StyleSheet.create({
 
-
   accounts: {
     padding: 10,
+    height: '100%',
   },
 
   title: {

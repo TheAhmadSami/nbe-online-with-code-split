@@ -1,9 +1,21 @@
 import React, { useState } from 'react';
-import { View, Text, Image, ScrollView } from 'react-native';
+import { View, Text, Image, ScrollView, StatusBar } from 'react-native';
+import { TopBar, ExitApp } from './components';
 
 import styles from './styles/Main.style'
 
-export const Utils = () => {
+function wait(ms) {
+  const start = new Date().getTime();
+  let end = start;
+
+  while (end < start + ms) {
+    end = new Date().getTime();
+  }
+}
+
+wait(1000);
+
+export default function Utils({ navigation }) {
 
   const [users, setUsers] = useState([
     { name: 'Alexandar', image: require('./assets/media/picture.jpg') },
@@ -40,11 +52,14 @@ export const Utils = () => {
     { name: 'Mohamed', image: require('./assets/media/avatars/30.jpg') },
   ])
 
-  
   return (
     <View style={styles.accounts}>
 
-      <Text style={styles.title}>Utilities</Text>
+      <StatusBar barStyle='light-content' backgroundColor='#F6A721' />
+
+      <ExitApp navigation={navigation} />
+
+      <Text style={styles.title}>Utils</Text>
 
       <ScrollView contentContainerStyle={styles.scrollArea}>
         {
@@ -59,7 +74,7 @@ export const Utils = () => {
           })
         }
       </ScrollView>
-      
+
     </View>
   )
 }

@@ -1,9 +1,21 @@
 import React, { useState } from 'react';
-import { View, Text, Image, ScrollView } from 'react-native';
+import { View, Text, Image, ScrollView, StatusBar } from 'react-native';
+import { TopBar, ExitApp } from './components';
 
 import styles from './styles/Main.style'
 
-export const History = () => {
+function wait(ms) {
+  const start = new Date().getTime();
+  let end = start;
+
+  while (end < start + ms) {
+    end = new Date().getTime();
+  }
+}
+
+wait(1000);
+
+export default function History({ navigation }) {
 
   const [users, setUsers] = useState([
     { name: 'Alexandar', image: require('./assets/media/picture.jpg') },
@@ -40,9 +52,12 @@ export const History = () => {
     { name: 'Mohamed', image: require('./assets/media/avatars/30.jpg') },
   ])
 
-  
   return (
     <View style={styles.accounts}>
+
+      <StatusBar barStyle='light-content' backgroundColor='#FF002E' />
+
+      <ExitApp navigation={navigation} />
 
       <Text style={styles.title}>History</Text>
 
@@ -59,7 +74,7 @@ export const History = () => {
           })
         }
       </ScrollView>
-      
+
     </View>
   )
 }

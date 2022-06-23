@@ -1,17 +1,16 @@
 import React from 'react';
-import { View } from 'react-native';
-import { Balance, More, SendMoney } from './components'
+import { View, StatusBar } from 'react-native';
+import { Balance, More, SendMoney, TopBar, Navigator } from './components'
 
 import styles from './styles/Main.style'
 
-export const Main = ({ navigation }) => {
+const Main = ({ navigation }) => {
   return (
     <View style={styles.main}>
-      <TopBar />
       <StatusBar barStyle='dark-content' backgroundColor='#F1F3FB' />
 
-
       <View>
+        <TopBar />
         <Balance />
         <More navigation={navigation} />
         <SendMoney />
@@ -21,3 +20,5 @@ export const Main = ({ navigation }) => {
     </View>
   )
 }
+
+export default Main;

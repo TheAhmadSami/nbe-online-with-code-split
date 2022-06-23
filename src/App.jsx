@@ -17,7 +17,7 @@ export const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="home" component={Main} options={{ headerShown: false }} />
+        <Stack.Screen name="main" component={Main} options={{ headerShown: false }} />
         <Stack.Screen name="accounts" component={Accounts} options={{ headerShown: false }} />
         <Stack.Screen name="cards" component={Cards} options={{ headerShown: false }} />
         <Stack.Screen name="utils" component={Utils} options={{ headerShown: false }} />

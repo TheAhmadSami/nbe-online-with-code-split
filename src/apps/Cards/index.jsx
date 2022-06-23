@@ -6,7 +6,7 @@ export default register({
   loader: () => import('./Cards'),
   placeholder: () => (
     <View style={{ flex: 1, justifyContent: "center" }}>
-      <ActivityIndicator size="large" color="#0398fc" />
+      <ActivityIndicator size="large" color="#00ADF8" />
     </View>
   ),
 });

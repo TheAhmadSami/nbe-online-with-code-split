@@ -8,7 +8,7 @@ export default styles = StyleSheet.create({
   topBar: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    padding: 10,
+    marginBottom: 15,
   },
 
   menu: {
