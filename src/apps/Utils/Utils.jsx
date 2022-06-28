@@ -4,17 +4,6 @@ import { TopBar, ExitApp } from './components';
 
 import styles from './styles/Main.style'
 
-function wait(ms) {
-  const start = new Date().getTime();
-  let end = start;
-
-  while (end < start + ms) {
-    end = new Date().getTime();
-  }
-}
-
-wait(1000);
-
 export default function Utils({ navigation }) {
 
   const [users, setUsers] = useState([
